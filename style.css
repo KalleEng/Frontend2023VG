@@ -14,16 +14,13 @@ body{
 
 .content-wrap{
     flex: 1;
+    padding-bottom: 125px;
 }
 
 .site-header{
     position: fixed;
     left: 0;
     top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
     width: 100%;
     opacity: 98%;
     background-color: #f8f9fa;
@@ -41,18 +38,15 @@ body{
 }
 
 .site-header a:hover{
+    font-size: 1.1em;
+    color: #c1a37a;
     text-decoration: underline;
-    transition: color .15s, ease-in-out;
+    transition: color .15s ease-in-out, font-size .20s ease-in-out;
 }
 
 .site-footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
     backdrop-filter: saturate(180%), blur(20px);
-    height: 125px;
-    background-color: #a18e72;
+    background-color: #a68a64;
 }
 
 ::-webkit-scrollbar-thumb{
