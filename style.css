@@ -12,18 +12,15 @@ body{
     color: #000000;
 }
 
-.content-wrap{
+.conten-wrap{
     flex: 1;
+    padding-bottom: 125px;
 }
 
 .site-header{
     position: fixed;
     left: 0;
     top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
     width: 100%;
     opacity: 98%;
     background-color: #f8f9fa;
@@ -45,13 +42,8 @@ body{
 }
 
 .site-footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
     backdrop-filter: saturate(180%), blur(20px);
-    height: 125px;
-    background-color: #a18e72;
+    background-color: #a68a64;
 }
 
 ::-webkit-scrollbar-thumb{
