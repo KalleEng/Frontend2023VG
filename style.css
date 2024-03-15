@@ -25,6 +25,7 @@ body{
     opacity: 98%;
     background-color: #f8f9fa;
     height: 50px;
+    z-index: 1;
     
 }
 

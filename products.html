@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontendShop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script>
+            class product{
+                constructor(id,title,category,description,price,image){
+                    this.id = id;
+                    this.title = title;
+                    this.category = category;
+                    this.description = description;
+                    this.price = price;
+                    this.image = image;
+                }
+            }
+            fetch('https://fakestoreapi.com/products')
+            .then(res => res.json())
+            .then(productData =>{
+                const products = productData.map(item => new product(item.id,item.title,item.category,item.description,item.price,item.image))
+                createCards(products);
+            })
+            .catch(error =>{
+                console.error('Error fetching',error);
+            });
+            function createCards(products){
+            const container = document.getElementById('container');
+            const imageUrl = "/Users/jakobengwall/Documents/Java/Frontend/Uppgift-Frontend/Frontend2023Bootstrap/418191328_760752952661075_4509974976545977324_n.jpeg";
+            const instances = products.length;
+    
+            for (let index = 0; index < instances; index++) {
+                const div = document.createElement('div');
+                div.className = "col-sm-6 col-md-3 col-lg-2 ms-3 mt-1 d-flex justify-content-center";
+                div.innerHTML = `
+                <div class="card">
+                    <img src="${products[index].image}" class="card-img-top" style="max-width: 100%; height: auto;" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">${products[index].title}</h5>
+                        <p class="card-text">${products[index].description}</p>
+                        <a href="#"class="btn btn-primary">Köp</a>
+                </div>`;
+                container.appendChild(div);
+            }
+        }
+        window.onload = createCards;
+
+
+        </script>
+</head>
+
+<body>
+    <div>
+        <header class="site-header" >
+            <div class="container-fluid content-above-images">
+                <div class="row justify-content-center align-items-center" style="height: 50px;">
+            <div class="col-auto"><a href="index.html">Home</a></div>
+            <div class="col-auto"><a href="products.html">Products</a></div>
+            <div class="col-auto"><a href="men.html">Men</a></div>
+            <div class="col-auto"><a href="women.html">Women</a></div>
+            <div class="col-auto"><a href="about.html">About Us</a></div>
+            <div class="col-auto"><a href="contact.html">Contact</a></div>
+        </div>
+        </div>
+        </header>
+        <br>
+        <br>
+
+    </div>
+
+    <div class="row mt-1 justify-content-center" id="container">
+        
+    </div>
+
+
+
+    <footer class="site-footer">
+        <div class="container"><span>Sticky footer</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
