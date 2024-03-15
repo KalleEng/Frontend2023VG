@@ -29,7 +29,8 @@ body{
 }
 
 .site-header a{
-    font-size: 0.9em;
+    font-family: "EB Garamond", serif;
+    font-size: 1em;
     text-decoration: none;
     padding: 10px;
     margin: 0 20px;
@@ -38,7 +39,7 @@ body{
 
 .site-header a:hover{
     font-size: 1.1em;
-    color: #c1a37a;
+    color: #bba17c;
     text-decoration: underline;
     transition: color .15s ease-in-out, font-size .20s ease-in-out;
 }
@@ -46,6 +47,18 @@ body{
 .site-footer{
     backdrop-filter: saturate(180%), blur(20px);
     background-color: #a68a64;
+    color: #000000;
+}
+
+.site-footer a{
+    font-family: "EB Garamond", serif;
+    color: #000000;
+    opacity: 80%;
+    text-decoration: none;
+}
+
+.site-footer a:hover{
+    text-decoration: underline;
 }
 
 ::-webkit-scrollbar-thumb{
