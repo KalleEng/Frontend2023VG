@@ -33,28 +33,30 @@ const setError = (element, message) => {
  const validateInputs = () => {
     const nameValue = nameField.value.trim();
     const emailValue = emailField.value.trim();
-    const numberValue = nameField.value.trim();
-    const addressValue = emailField.value.trim();
+    const numberValue = numberField.value.trim();
+    const addressValue = addressField.value.trim();
    
 
-    if(nameValue === '') {
-        setError(nameField, "Fill in your name.")
-         }else {
+    if(nameValue.length >= 2 && nameValue.length <= 50) {
         setSuccess(nameField);
+         }else {
+        setError(nameField, "Name must be between 2-50 characters.")
     }
     
  
-    if(emailValue === '') {
-    setError(emailField, "Fill in your email address.")
+    if(emailValue.length <= 50 && emailValue.includes("@")) {
+    setSuccess(emailField);
   }else {
-        setSuccess(emailField);
+    setError(emailField, "Fill in your email address.")
     }
    
   
-    if(numberValue === '') {
-        setError(numberField, "Fill in your phone number.")
+   
+    const phoneNumberLimits = /^[\d()-]{0,50}$/;
+    if(phoneNumberLimits.test(numberValue)) {
+       setSuccess(numberField)
          }else {
-        setSuccess(numberField);
+            setError(numberField, "Fill in your phone number.")
     }
     
   
@@ -63,6 +65,8 @@ const setError = (element, message) => {
    }else {
         setSuccess(addressField);
     }
+
+   
 
     
     
