@@ -4,6 +4,7 @@
  const numberField = document.getElementById('number');
  const addressField = document.getElementById("address")
  
+ 
  form.addEventListener('submit', e => {
     e.preventDefault()
     validateInputs();
@@ -52,7 +53,7 @@ const setError = (element, message) => {
    
   
    
-    const phoneNumberLimits = /^[\d()-]{0,50}$/;
+    const phoneNumberLimits = /^[\d()-]{10,13}$/;
     if(phoneNumberLimits.test(numberValue)) {
        setSuccess(numberField)
          }else {
@@ -65,6 +66,8 @@ const setError = (element, message) => {
    }else {
         setSuccess(addressField);
     }
+
+
 
    
 
