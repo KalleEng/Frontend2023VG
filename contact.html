@@ -10,6 +10,8 @@
    
 </head>
 <body>
+
+   
     <div>
         <header class="site-header">
             <div class="container-fluid">
@@ -20,6 +22,7 @@
             <div class="col-auto"><a href="women.html">Women</a></div>
             <div class="col-auto"><a href="about.html">About Us</a></div>
             <div class="col-auto"><a href="contact.html">Contact</a></div>
+          
         </div>
         </div>
         <form action>
@@ -30,7 +33,7 @@
           <h1 class="align-items-center">CONTACT US</h1>
     <label for="name">Name</label>
     <br>
-    <input type="text" id = "name" placeholder="Firstname Surname" >
+    <input type="text" id = "name" placeholder="Firstname Surname" required >
     <br>
     <br>
     <label for="email">Email</label>
@@ -44,7 +47,16 @@
      <textarea id="message" rows="6" required="" class="form-control"></textarea>
      <br>
 
-     <input type="submit" class="btn form-control" style="background-color: #bba17c;" value="SEND">
+     <input type="submit" class="btn form-control" style="background-color: #bba17c;" value="SEND" onclick="formpopup();">
+
+
+     <script>
+        function formpopup() {
+            document.getElementById("demo").innerHTML = "Thank you for sending us a message. Well get back to you within 3-5 business days."
+           
+        }
+        </script>
+        <p id = "demo"> </p>
 
     
         
@@ -54,6 +66,7 @@
 
     </form>
     </div>
+    
 </div>
 </div>
     
