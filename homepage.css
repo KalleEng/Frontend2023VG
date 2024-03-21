@@ -87,6 +87,21 @@ body{
 
 }
 
+.product-container{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.product-image{
+    max-width: 30%;
+    height: 30%;
+}
+
+.product-description, .product-price{
+    font-family: 'Spline Sans Mono';
+    margin: 10px 0;
+}
+
 .spline-sans mono-font {
     font-family: 'Spline Sans Mono', monospace;
     font-optical-sizing: auto;

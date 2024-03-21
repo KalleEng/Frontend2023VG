@@ -33,52 +33,76 @@
         </header>
     </div>
 
-    <div class="container-fluid">
-        <div class="row py-5">
-            <div class="col-md-2 offset-md-4"> <img src="images\Fashion.jpg" class="img-fluid" alt="Fashion"></div>
-            <div class="col-md-2"><img src="images\manFashion.jpg" class="img-fluid" alt="manFashion"></div>
-        </div>
-        <div class="row">
-            <div class="col text-center">
-                <h1>FASHION</h1>
-            </div>
-        </div>
-        <div class="row py-3 px-5 gx-1">
-            <div class="col-md-3"><img src="images\womanFashion.jpg" class="img-fluid" alt="womanFashion"></div>
-            <div class="col-md-3"><img src="images\womanFashion.jpg" class="img-fluid" alt="womanFashion"></div>
-            <div class="col-md-3"><img src="images\womanFashion.jpg" class="img-fluid" alt="womanFashion"></div>
-            <div class="col-md-3"><img src="images\womanFashion.jpg" class="img-fluid" alt="womanFashion"></div>
-
-        </div>
-
+    <div id="productContainer" class="product-container mt-3 text-center"></div>
     </div>
+        <script>
+            function getAPIs() {
+                fetch('https://fakestoreapi.com/products/1')
+                    .then((res) => res.json())
+                    .then(json => {
+                        const container = document.getElementById('productContainer');
 
-    <footer class="site-footer mt-auto">
-        <div class="container-fluid pt-5 pb-3">
-            <div class="row align-left">
-                <div class="col-auto"><a href="index.html">Home</a></div>
-            </div>
-            <div class="row align-left">
-                <div class="col-auto"><a href="products.html">Products</a></div>
-            </div>
-            <div class="row align-left">
-                <div class="col-auto"><a href="men.html">Men</a></div>
-            </div>
-            <div class="row">
-                <div class="col-auto"><a href="women.html">Women</a></div>
-            </div>
-            <div class="row">
-                <div class="col-auto"><a href="about.html">About Us</a></div>
-            </div>
-            <div class="row">
-                <div class="col-auto"><a href="contact.html">Contact</a></div>
-            </div>
-        </div>
-    </footer>
+                        const productBox = document.createElement('div');
+                        productBox.classList.add('product-box');
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+                        const img = document.createElement('img');
+                        img.src = json.image;
+                        img.alt = json.title;
+                        img.classList.add('product-image');
+                        productBox.appendChild(img);
+
+                        const productInfo = document.createElement('div');
+                        productInfo.classList.add('product-info');
+
+                        const price = document.createElement('p');
+                        price.textContent = `Price: ${json.price}`;
+                        price.classList.add('product-price');
+                        productInfo.appendChild(price);
+
+                        const description = document.createElement('p');
+                        description.innerHTML = `Description: ${json.description}`;
+                        description.classList.add('product-description');
+                        productInfo.appendChild(description);
+
+                        productBox.appendChild(productInfo);
+
+                        container.appendChild(productBox);
+                        
+                    })
+                    .catch(error => {
+                        console.error('Error fetching data', error);
+                    });
+            }
+
+            getAPIs();
+        </script>
+
+        <footer class="site-footer mt-auto">
+            <div class="container-fluid pt-5 pb-3">
+                <div class="row align-left">
+                    <div class="col-auto"><a href="index.html">Home</a></div>
+                </div>
+                <div class="row align-left">
+                    <div class="col-auto"><a href="products.html">Products</a></div>
+                </div>
+                <div class="row align-left">
+                    <div class="col-auto"><a href="men.html">Men</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-auto"><a href="women.html">Women</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-auto"><a href="about.html">About Us</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-auto"><a href="contact.html">Contact</a></div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
 
 </body>
 
