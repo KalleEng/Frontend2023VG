@@ -32,77 +32,80 @@
             </div>
         </header>
     </div>
-
-    <div id="productContainer" class="product-container mt-3 text-center"></div>
-    </div>
-        <script>
-            function getAPIs() {
-                fetch('https://fakestoreapi.com/products/1')
-                    .then((res) => res.json())
-                    .then(json => {
-                        const container = document.getElementById('productContainer');
-
-                        const productBox = document.createElement('div');
-                        productBox.classList.add('product-box');
-
-                        const img = document.createElement('img');
-                        img.src = json.image;
-                        img.alt = json.title;
-                        img.classList.add('product-image');
-                        productBox.appendChild(img);
-
-                        const productInfo = document.createElement('div');
-                        productInfo.classList.add('product-info');
-
-                        const price = document.createElement('p');
-                        price.textContent = `Price: ${json.price}`;
-                        price.classList.add('product-price');
-                        productInfo.appendChild(price);
-
-                        const description = document.createElement('p');
-                        description.innerHTML = `Description: ${json.description}`;
-                        description.classList.add('product-description');
-                        productInfo.appendChild(description);
-
-                        productBox.appendChild(productInfo);
-
-                        container.appendChild(productBox);
-                        
-                    })
-                    .catch(error => {
-                        console.error('Error fetching data', error);
-                    });
-            }
-
-            getAPIs();
-        </script>
-
-        <footer class="site-footer mt-auto">
-            <div class="container-fluid pt-5 pb-3">
-                <div class="row align-left">
-                    <div class="col-auto"><a href="index.html">Home</a></div>
+    <div class="carousel-container mt-5">
+        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true"
+            data-bs-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="..." class="d-block w-100" alt="...">
                 </div>
-                <div class="row align-left">
-                    <div class="col-auto"><a href="products.html">Products</a></div>
+                <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
                 </div>
-                <div class="row align-left">
-                    <div class="col-auto"><a href="men.html">Men</a></div>
-                </div>
-                <div class="row">
-                    <div class="col-auto"><a href="women.html">Women</a></div>
-                </div>
-                <div class="row">
-                    <div class="col-auto"><a href="about.html">About Us</a></div>
-                </div>
-                <div class="row">
-                    <div class="col-auto"><a href="contact.html">Contact</a></div>
+                <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
                 </div>
             </div>
-        </footer>
+        </div>
+    </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
+    <script>
+        function getAPIs() {
+            fetch('https://fakestoreapi.com/products?limit=3')
+                .then((res) => res.json())
+                .then(images => {
+
+                    const carouselInner = document.querySelector('.carousel-inner');
+                    carouselInner.innerHTML = '';
+
+                    images.forEach((img, index) => {
+                        const item = document.createElement('div');
+                        item.classList.add('carousel-item');
+
+
+                        if (index === 0) item.classList.add('active');
+
+                        const imgTag = document.createElement('img');
+                        imgTag.src = img.image;
+                        imgTag.alt = `Slide ${index + 1}`;
+                        imgTag.classList.add('d-block', 'w-100');
+
+                        item.appendChild(imgTag);
+                        carouselInner.appendChild(item);
+                    });
+
+                }).catch(err => console.error('Error fetching images', err));
+        }
+
+        document.addEventListener('DOMContentLoaded', getAPIs);
+    </script>
+
+    <footer class="site-footer mt-auto">
+        <div class="container-fluid pt-5 pb-3">
+            <div class="row align-left">
+                <div class="col-auto"><a href="index.html">Home</a></div>
+            </div>
+            <div class="row align-left">
+                <div class="col-auto"><a href="products.html">Products</a></div>
+            </div>
+            <div class="row align-left">
+                <div class="col-auto"><a href="men.html">Men</a></div>
+            </div>
+            <div class="row">
+                <div class="col-auto"><a href="women.html">Women</a></div>
+            </div>
+            <div class="row">
+                <div class="col-auto"><a href="about.html">About Us</a></div>
+            </div>
+            <div class="row">
+                <div class="col-auto"><a href="contact.html">Contact</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
 </body>
 
