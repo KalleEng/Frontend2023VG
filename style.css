@@ -8,7 +8,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f8f9fa;
+    background-color: white;
     color: #000000;
 }
 
@@ -19,13 +19,73 @@ body{
 
 .site-header{
     position: fixed;
+    font-family: "EB Garamond", serif;
+    display: grid; 
+    font-size: 20px;
     left: 0;
     top: 0;
     width: 100%;
     opacity: 98%;
-    background-color: #f8f9fa;
-    height: 50px;
+    background-color: #F0F0F0
+    ;
     
+    height: 50px;
+    z-index: 1;
+}
+
+.full-page{
+    background-color: white;
+}
+.dropbtn {
+    position: fixed;
+    background-color: black;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 16px;
+    font-family: "EB Garamond", serif;
+    border: none;
+    width: 130px;
+    height: 50px;
+  }
+.dropdown {
+    display: inline-block;
+  }
+
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    left: 0;
+    font-family: "EB Garamond", serif;
+    padding: 10px;
+    font-size: 16px;
+    background-color: black;
+    width: 130px;
+}
+
+.dropdown:hover .dropdown-content {display: flex;}
+.dropdown:hover .dropbtn {background-color: #FC814A;}
+
+.card{
+    position: relative;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0;
+    border: none;
+}
+
+.card-title{
+    font-family: 'Spline Sans Mono';
+    font-size: medium;
+    text-align: center;
+}
+
+.card-text{
+    font-family: 'Spline Sans Mono';
+    font-size: 14px;
 }
 
 .site-header a{
@@ -34,32 +94,85 @@ body{
     text-decoration: none;
     padding: 10px;
     margin: 0 20px;
-    color: #000000;
+    color: black;
+    transition: color .15s ease-in-out, font-size .20s ease-in-out;
 }
 
 .site-header a:hover{
     font-size: 1.1em;
-    color: #bba17c;
-    text-decoration: underline;
+    color: #c1a37a;
     transition: color .15s ease-in-out, font-size .20s ease-in-out;
 }
 
 .site-footer{
     backdrop-filter: saturate(180%), blur(20px);
-    background-color: #a68a64;
-    color: #000000;
+    background-color: #F0F0F0;
 }
 
-.site-footer a{
-    font-family: "EB Garamond", serif;
-    color: #000000;
-    opacity: 80%;
+.description-text{
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card-img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.card-img-container a:hover{
+    width: 110%;
+    height: 110%;
+}
+
+.card-img-container img{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.card-body{
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+
+}
+
+
+.bread-container{
+    position: absolute;
+    display: flex;
+    padding-top: 20px;
+    
+    flex-direction: column;
+    width: auto;
+    bottom: 0;
+    
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    box-sizing: border-box;
+    
+}
+
+
+
+.btn-custom{
+    background-color: #000000;
+    font-family: 'Spline Sans Mono';
+    font-size: small;
     text-decoration: none;
+    color: #f8f9fa;
+    padding: 10px 20px;
 }
 
-.site-footer a:hover{
-    text-decoration: underline;
-}
 
 ::-webkit-scrollbar-thumb{
     background: #343a40;
@@ -73,5 +186,18 @@ body{
     width: 15px;
 }
 
-   
-    
+.spline-sans mono-font {
+    font-family: 'Spline Sans Mono', monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .eb-garamond {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  
