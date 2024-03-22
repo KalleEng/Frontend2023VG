@@ -37,7 +37,7 @@ function createCards(products) {
                         <h5 class="card-title">${products[index].title}</h5>
                             <div class="bread-container">
                                 <p class="card-text">Price: ${products[index].price}$</p>
-                                <a href="#"class="btn-custom">Purchase</a>
+                                <a href="order.html"class="btn-custom">Purchase</a>
                             </div>
                     </div>
         </div>`;
