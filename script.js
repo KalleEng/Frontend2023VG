@@ -33,8 +33,13 @@ function createCards(products) {
                     <div class="card-body">
                         <h5 class="card-title">${product.title}</h5>
                             <div class="bread-container">
+<<<<<<< HEAD
                                 <p class="card-text">Price: $${product.price}</p>
                                 <button class="btn-custom" onclick="addToCart(${product.id})">Purchase</button>
+=======
+                                <p class="card-text">Price: ${products[index].price}$</p>
+                                <a href="order.html"class="btn-custom">Purchase</a>
+>>>>>>> origin/kareems
                             </div>
                     </div>
         </div>`;

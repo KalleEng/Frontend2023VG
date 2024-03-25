@@ -43,6 +43,7 @@ body{
     transition: color .15s ease-in-out, font-size .20s ease-in-out;
 }
 
+<<<<<<< HEAD:productpage.css
 .full-page{
     background-color: white;
 }
@@ -116,6 +117,11 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+=======
+.site-footer{
+    backdrop-filter: saturate(180%), blur(20px);
+    background-color: #F0F0F0;
+>>>>>>> origin/kareems:style.css
 }
 
 .description-text{
