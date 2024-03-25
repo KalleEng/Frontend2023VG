@@ -19,7 +19,7 @@ let isValid = false;
 
 document.getElementById('submit-btn').addEventListener('click', function () {
     if(isValid){
-        window.location.href = "orderconf.html";
+        window.location.href = "../OrderConf/orderconf.html";
     }
 });
 

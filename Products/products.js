@@ -47,7 +47,7 @@ function addToCart(productId){
     localStorage.setItem("productToCart", JSON.stringify(productToCart));
     let productFromLS = JSON.parse(localStorage.getItem("productToCart"));
     console.log(productFromLS);
-    window.location.href="order.html";
+    window.location.href="../Order/order.html";
 }
 
 const mensClothing = encodeURIComponent("men's clothing")
