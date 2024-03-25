@@ -2,6 +2,7 @@
     max-width: 800px;
     margin: auto;
     padding: 20px;
+    max-height: 400;
    
     width: 400px;
     margin: auto;
@@ -48,7 +49,12 @@
 
 .input-control.error input {
     border-color: red;
+    text-decoration: double;
 }
+.error {
+    font-size: 15px
+}
+
 
 
 

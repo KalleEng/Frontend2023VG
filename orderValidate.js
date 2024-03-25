@@ -2,7 +2,11 @@
  const nameField = document.getElementById('name');
  const emailField = document.getElementById("email")
  const numberField = document.getElementById('number');
- const addressField = document.getElementById("address")
+ const addressField = document.getElementById("address");
+ const streetField = document.getElementById("street");
+ const streetNumField = document.getElementById("streetNum");
+ const cityField = document.getElementById("city");
+ 
  
  
  form.addEventListener('submit', e => {
@@ -35,7 +39,9 @@ const setError = (element, message) => {
     const nameValue = nameField.value.trim();
     const emailValue = emailField.value.trim();
     const numberValue = numberField.value.trim();
-    const addressValue = addressField.value.trim();
+    const streetValue = streetField.value.trim();
+    const streetNumValue = streetNumField.value.trim();
+    const cityValue = cityField.value.trim();
    
 
     if(nameValue.length >= 2 && nameValue.length <= 50) {
@@ -61,25 +67,29 @@ const setError = (element, message) => {
     }
     
   
-    if(addressValue === '') {
-    setError(addressField, "Fill in address.")
+
+if( streetValue.length >= 2 && streetValue.length <=50) {
+    setSuccess(streetField)
    }else {
-        setSuccess(addressField);
+        setError(streetField, "Street has to be 2-50 characters long.")
     }
+    const onlyNumbersRegex = /^\d+$/;
+     const onlyNumbers = "1, 2, 3, 4, 5, 6, 7 ,8, 9";
+    if(streetNumValue.includesonlyNumbers.length && streetNumValue.length === 5) {
+        setSuccess(streetNumField)
+       }else {
+            setError(streetNumField, "Street number has to be 5 numbers total.")
+       }
 
 
+ 
+    if(cityValue.length >= 2 && cityValue.length <= 50) {
+    setSuccess(cityField)
+   }else {
+       setError(cityField, "City has to be 2-50 characters long.");
+   }
+}
 
-   
-
-    
-    
-
-    
-    
-   
-    
-
- }
 
    
 
