@@ -13,12 +13,19 @@ function fetchProducts(apiCategory) {
     fetch(`https://fakestoreapi.com/products${apiCategory}`)
         .then(res => res.json())
         .then(productData => {
-            const products = productData.map(item => new Product(item.id, item.title, item.category, item.description, item.price, item.image))
+            const products = productData.map(item => new Product
+                (item.id, item.title, item.category, item.description, item.price, item.image))
+
             createCards(products);
         })
         .catch(error => {
             console.error('Error fetching', error);
         });
+}
+
+async function fetchProducts2(apiCategory){
+    let resp = await fetch(`https://fakestoreapi.com/products${apiCategory}`);
+    let json  = await resp.json()
 }
 
 function createCards(products) {
@@ -51,7 +58,7 @@ function reloadPageWithCategory(apiCategory) {
 
 const mensClothing = encodeURIComponent("men's clothing")
 const womensClothing = encodeURIComponent("women's clothing")
-
+    
 const btnMappings =
     [
         {
@@ -88,7 +95,8 @@ function populateButtons(btnMappings) {
 document.addEventListener(`DOMContentLoaded`, function () {
     populateButtons(btnMappings);
     const urlParams = new URLSearchParams(window.location.search);
-    const category = urlParams.get('category' || '');
+    const categoryParam = urlParams.get('category');
+    const category = categoryParam !== null? categoryParam : '';
     console.log(category);
     fetchProducts(category);
 })
