@@ -74,8 +74,8 @@ if( streetValue.length >= 2 && streetValue.length <=50) {
         setError(streetField, "Street has to be 2-50 characters long.")
     }
     const onlyNumbersRegex = /^\d+$/;
-     const onlyNumbers = "1, 2, 3, 4, 5, 6, 7 ,8, 9";
-    if(streetNumValue.includesonlyNumbers.length && streetNumValue.length === 5) {
+    // const onlyNumbers = "1, 2, 3, 4, 5, 6, 7 ,8, 9";
+    if(onlyNumbersRegex.test(streetNumValue) && streetNumValue.length === 5) {
         setSuccess(streetNumField)
        }else {
             setError(streetNumField, "Street number has to be 5 numbers total.")
