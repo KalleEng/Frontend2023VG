@@ -2,7 +2,11 @@
     display: flex;
     width: 80%;
     margin: auto;
-    margin-right: 5rem;
+    margin-right: 11rem;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #023047;
+    
 
 }
 .flex-container {
@@ -11,7 +15,9 @@
 .flex-container-2 {
     margin-bottom: 5rem;
 }
+
 .flex-1 img {
+    padding: 18px;
     height: 30rem;
     border-radius: 50%;
 
@@ -34,16 +40,10 @@
 }
 .vd-text {
     margin-right: 10rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     font-family: 'Montserrat', sans-serif;
 }
 
-.flex-4 img {
-    height: 30rem;
-    width: 45rem;
-    border-radius: 50%;
-    margin-left: rem;
-}
 .flex-4 {
     width: 50%;
     flex: 1;
@@ -62,4 +62,111 @@
     margin-right: 10rem;
     margin-top: 5%;
 }
+.video {
+
+    height: 30rem;
+    width: 45rem;
+    border-radius: 25%;
+    overflow: hidden;
+}
+.flex-container-2 .hover-text {
+    position: absolute;
+    top: 50%;   
+    left: 75%; 
+    transform: translate(calc(-50% - 24px), -50%);
+    background: #020470;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    pointer-events: none;
+    box-shadow: 4px 4px 50px -4px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    letter-spacing: 0.8px;
+    transition: all 400ms ease;
+}
+.flex-container-2 .hover-text.active {
+    opacity: 1;
+    letter-spacing: 0;
+    transform: translate(-50%,-50%);
+
+}
+.video-description {
+
+    padding: 16px;
+    line-height: 1.1;
+    background: #edf6f9;
+    color: #023047;
+    text-align: center;
+    
+
+}
+
+.vd-info {
+
+    padding: 10px;
+    line-height: 1.1;
+    background: #edf6f9;
+    color: #023047;
+    text-align: center;
+
+}
+.site-header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    opacity: 98%;
+    background-color: #F0F0F0;
+    height: 50px;
+    z-index: 1;
+    
+}
+.site-header a{
+    font-family: "EB Garamond", serif;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 20px;
+    color: #000000;
+    transition: color .15s ease-in-out, font-size .20s ease-in-out;
+    
+}
+
+.site-header a:hover{
+    font-size: 1.1em;
+    color: #bba17c;
+    transition: color .15s ease-in-out, font-size .20s ease-in-out;
+}
+.site-footer{
+    backdrop-filter: saturate(180%), blur(20px);
+    background-color: #F0F0F0;
+    color: #000000;
+}
+
+.site-footer a{
+    font-family: "EB Garamond", serif;
+    color: #000000;
+    text-decoration: none;
+}
+
+.site-footer a:hover{
+    text-decoration: underline;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #343a40;
+    border-radius: 5px;
+
+}
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+}
+::-webkit-scrollbar{
+    width: 6px;
+}
+
+
+
+    
+
 
