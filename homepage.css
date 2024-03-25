@@ -88,47 +88,23 @@ body{
 
 }
 
-
-/* .product-info{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.product-description, .product-price{
-    font-family: 'Spline Sans Mono';
-    text-align: left;
-    margin: 10px 0;
-    font-size: 0.9em;
-} */
-
 #imageCarousel{
-    border: 3px;
-    
-    padding: 15px;
     margin: 20px auto;
-    max-width: 25%;
-    height: 600px;
-    
+    max-width: 26%;
+    height: 695px;
     align-items: center;
     overflow: hidden;
 
 }
 
-.carousel-item{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.carousel-indicators {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px; 
+    border-radius: 10px; 
 }
 
-.carousel-item img{
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    
-}
+
+
 
 .spline-sans mono-font {
     font-family: 'Spline Sans Mono', monospace;
