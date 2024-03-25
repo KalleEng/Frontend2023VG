@@ -1,52 +1,3 @@
-
-html, body{
-    height: 100%;
-    margin: 0;
-}
-
-body{
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: white;
-    color: #000000;
-}
-
-.content-wrap{
-    flex: 1;
-    padding-bottom: 125px;
-}
-
-.site-header{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    opacity: 98%;
-    background-color: #F0F0F0;
-    height: 50px;
-    z-index: 1;
-}
-
-.site-header a{
-    font-family: "EB Garamond", serif;
-    font-size: 1em;
-    text-decoration: none;
-    padding: 10px;
-    margin: 0 20px;
-    color: black;
-    transition: color .15s ease-in-out, font-size .20s ease-in-out;
-}
-
-.site-header a:hover{
-    font-size: 1.1em;
-    color: #c1a37a;
-    transition: color .15s ease-in-out, font-size .20s ease-in-out;
-}
-
-<<<<<<< HEAD:productpage.css
-.full-page{
-    background-color: white;
-}
 .dropbtn {
     color: black;
     font-size: 20px;
@@ -108,20 +59,10 @@ body{
     text-align: center;
 }
 
-.card-text{
-    font-family: 'Spline Sans Mono';
-    font-size: 14px;
-}
-
 .align-left {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-=======
-.site-footer{
-    backdrop-filter: saturate(180%), blur(20px);
-    background-color: #F0F0F0;
->>>>>>> origin/kareems:style.css
 }
 
 .description-text{
@@ -159,22 +100,6 @@ body{
     margin-bottom: 50px;
 
 }
-
-.bread-container{
-    position: absolute;
-    display: flex;
-    padding-top: 20px;
-    flex-direction: column;
-    width: auto;
-    bottom: 0;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-    box-sizing: border-box;
-    
-}
-
-
 
 .btn-custom{
     background-color: #000000;

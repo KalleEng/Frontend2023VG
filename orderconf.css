@@ -1,0 +1,19 @@
+.form{
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua  ;
+}
+.purchase-container{
+    display: flex;
+    position: fixed;
+    justify-self: center;
+    text-align: center;
+    flex-direction: column;
+    height: 500px;
+    width: 400px;
+    
+    top: 100px;
+    width: 500px;
+}
