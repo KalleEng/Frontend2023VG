@@ -2,8 +2,7 @@
     display: flex;
     padding-top: 50px;
     justify-content: center;
-    align-items: center;
-    background-color: aqua  ;
+    align-items: center; 
 }
 .purchase-container{
     display: flex;
@@ -12,8 +11,74 @@
     text-align: center;
     flex-direction: column;
     height: 500px;
-    width: 400px;
-    
+    width: auto;
     top: 100px;
     width: 500px;
 }
+
+.product-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.card-img-top{
+    grid-column: 1;
+    padding-bottom: 20px;
+}
+
+.card-title{
+    font-family: 'Spline Sans Mono';
+    font-weight: 900;
+    font-size: large;
+    text-align: center;
+}
+
+.card-txt{
+    padding-top: 10px;
+    font-family: 'Spline Sans Mono';
+    width: 100%;
+    height: auto;
+    font-weight: 400;
+    font-size: small;
+    text-align: center;
+}
+
+.header-purchase{
+    font-family: "EB Garamond", serif;
+}
+
+.bread-container-conf{
+    margin: 0 auto;
+    
+    display: flex;
+    
+    flex-direction: column;
+    width: auto;
+    bottom: 0;
+    align-items: center;
+    justify-self: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    
+}
+
+.card-body{
+    justify-content: space-between;
+    background-color: aquamarine;
+}
+
+.spline-sans mono-font {
+    font-family: 'Spline Sans Mono', monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .eb-garamond {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+  

@@ -8,11 +8,12 @@ function getCart(){
     <div class ="card-img-container">
         <img src="${cart.image}" class="card-img-top" style="max-height: 300px; width: auto;" alt="">
     </div>
-    <div class="card-body">
-        <h5 class="card-title">${cart.title}</h5>
-        <div class="bread-container">
-            <p class="card-text">${cart.description}</p>
+    
+    <div class="bread-container-conf">
+    <h5 class="card-title">${cart.title}</h5>
+            <p class="card-txt">${cart.description}</p>
     </div>
+   
     `   
 }
 
