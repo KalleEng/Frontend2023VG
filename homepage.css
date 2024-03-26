@@ -12,7 +12,17 @@ body{
     color: #000000;
 }
 
-
+.welcome-heading{
+    font-family: "EB Garamond", serif;
+    color: #000000;
+    text-decoration: none;
+    font-size: 100px;
+    width: 100vw;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 100px;
+    
+}
 
 .site-header{
     position: fixed;
