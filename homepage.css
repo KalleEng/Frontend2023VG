@@ -12,10 +12,7 @@ body{
     color: #000000;
 }
 
-.content-wrap{
-    flex: 1;
-    padding-bottom: 125px;
-}
+
 
 .site-header{
     position: fixed;
