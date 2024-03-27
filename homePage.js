@@ -25,7 +25,7 @@
 //         }).catch(err => console.error('Error fetching images', err));
 // }
 
-async function getData(){
+async function getData() {
     try {
         const url = "https://fakestoreapi.com/products?limit=5";
         let response = await fetch(url);
@@ -38,8 +38,8 @@ async function getData(){
             const item = document.createElement('div');
             item.classList.add('carousel-item');
 
-            if(index === 0)
-            item.classList.add('active');
+            if (index === 0)
+                item.classList.add('active');
 
             const imgTag = document.createElement('img');
             imgTag.src = img.image;
