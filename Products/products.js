@@ -44,14 +44,19 @@ function createCards(products) {
 
 function addToCart(productId){
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const productIndex = cart.findIndex(item => item.product.id === productId);
 
     const productToCart = productList.find(product => product.id === productId);
 
-    cart.push(productToCart);
+    if(productIndex > -1){
+        cart[productIndex].quantity += 1;
+    } else{
+        cart.push({product: productToCart, quantity: 1});
+    }
+
     localStorage.setItem("cart", JSON.stringify(cart));
-    // let productFromLS = JSON.parse(localStorage.getItem("productToCart"));
-    console.log(cart);
-    window.location.href="../Order/order.html";
+
+    alert(`${productToCart.title} added to cart`);
 }
 
 const mensClothing = encodeURIComponent("men's clothing")

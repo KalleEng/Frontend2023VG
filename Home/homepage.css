@@ -53,22 +53,6 @@ body{
     transition: color .15s ease-in-out, font-size .20s ease-in-out;
 }
 
-.site-footer{
-    backdrop-filter: saturate(180%), blur(20px);
-    background-color: #F0F0F0;
-    color: #000000;
-}
-
-.site-footer a{
-    font-family: "EB Garamond", serif;
-    color: #000000;
-    text-decoration: none;
-}
-
-.site-footer a:hover{
-    text-decoration: underline;
-}
-
 ::-webkit-scrollbar-thumb{
     background: #343a40;
     border-radius: 5px;
