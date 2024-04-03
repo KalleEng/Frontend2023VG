@@ -1,7 +1,5 @@
 function getCart() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    console.log(cart)
-    console.log("hej")
 
     const container = document.getElementById("cart-container");
     container.innerHTML = "";
@@ -29,6 +27,7 @@ function getCart() {
             <h3>Total: $${totalSum.toFixed(2)}</h3>
         </div>
         <button onclick="removeAllItems()" class="clear-btn">Remove All Items</button>
+        <button onclick="proceedToOrder()" class="proceed-btn">Proceed</button>
     `;
 }
 
@@ -52,6 +51,10 @@ function removeAllItems(){
     getCart();
 
     alert("All products have been removed");
+}
+
+function proceedToOrder(){
+    window.location.href = "../Order/order.html";
 }
 
 getCart();
