@@ -2,6 +2,25 @@ body{
     padding-top: 50px;
     font-family: "EB Garamond", serif;
 }
+button{
+    background-color: black;
+    color: white;
+    border-radius: 10%;
+}
+
+.cart-table{
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.cart-table th, .cart-table td{
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+
+
 
 ::-webkit-scrollbar-thumb{
     background: #343a40;
